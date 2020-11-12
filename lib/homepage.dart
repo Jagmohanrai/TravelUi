@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:travelui/categories.dart';
+import 'package:travelui/popularplaces.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -211,6 +213,96 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            PopularPlace(),
+            Padding(
+              padding: EdgeInsets.only(top: 8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Categories',
+                    style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
+                  ),
+                  Text(
+                    'View all',
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 15,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Categories(),
+            Padding(
+              padding: EdgeInsets.only(top: 8.0),
+              child: ListTile(
+                leading: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    'assets/img1.jpeg',
+                  ),
+                ),
+                title: Text('Levarena Luxury Resort'),
+                subtitle: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Icon(
+                          Icons.location_on,
+                          size: 15,
+                          color: Colors.black26,
+                        ),
+                        Padding(
+                          padding: EdgeInsets.only(top: 4.0),
+                          child: Text('Da nang ,Viet Nam'),
+                        ),
+                      ],
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(top: 4.0),
+                      child: Row(
+                        children: [
+                          Icon(
+                            Icons.star,
+                            size: 15,
+                            color: Colors.yellow[700],
+                          ),
+                          Icon(Icons.star, size: 15, color: Colors.yellow[700]),
+                          Icon(Icons.star, size: 15, color: Colors.yellow[700]),
+                          Icon(Icons.star, size: 15, color: Colors.yellow[700]),
+                          Icon(Icons.star, size: 15, color: Colors.black12),
+                          SizedBox(
+                            width: 80,
+                          ),
+                          RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: "120",
+                                  style: TextStyle(
+                                    color: Colors.blue,
+                                    fontSize: 17,
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: "/night",
+                                  style: TextStyle(
+                                    color: Colors.black38,
+                                    fontSize: 14,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
               ),
             ),
           ],
