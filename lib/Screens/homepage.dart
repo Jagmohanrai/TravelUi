@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:travelui/categories.dart';
-import 'package:travelui/popularplaces.dart';
+import 'package:travelui/components/categories.dart';
+import 'package:travelui/components/popularplaces.dart';
 
 class HomePage extends StatefulWidget {
   @override
